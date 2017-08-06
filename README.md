@@ -1,4 +1,4 @@
-# BrandingVerticals Wordpress Boilerplate.
+# Smile Cafe Custom Wordpress Theme
 
 
 
