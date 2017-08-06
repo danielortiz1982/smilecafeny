@@ -2,15 +2,17 @@
 // Variable Colors
 @black: #000000;
 @white: #ffffff;
+@darkblue: #001438;
+@lightblue: #016CDA;
 @lightGrey: #cccccc;
 @grey: #72706f;
-@darkGrey: #333333;
 @orange: #f58502;
 
 
 // Variable Sizes 
 @fullWidth: 100%;
 @contentBox: 90%;
+@headerHeight: 9em;
 @footerHeight: 5em;
 
 
@@ -65,7 +67,7 @@ html{
 			font-weight: bold;
 		}
 		a{
-			color: @black;
+			color: @darkblue;
 			text-decoration: none;
 			transition: 1s;
 			cursor: pointer;
@@ -84,37 +86,46 @@ html{
 
 			.site-header{
 				width: @fullWidth;
-				background-image: url(../../images/background.png);
-				background-repeat: repeat;
+				border-top: solid 1.5em @darkblue;
 				.margin();
 				.padding();
 				.display();
 
 				.contentBox{
 					width: @contentBox;
+					height: @headerHeight;
 					.margin();
 					.display();
 					.padding();
-					.header_logo{
-						width: 30%;
-						height: 10em;
-						.margin(0);
-						.padding(1em 0);
-						.display(table);
-
-						.logo{
-							width: @fullWidth;
-							vertical-align: middle;
-							.display(table-cell);
-
-							img{
-								width: 100%;
-								height: auto;
-								.display();
+					.col-md-6{
+						.padding();
+						.header-contact{
+							.margin(1.5em 0);
+							p{
 								.margin();
-								.padding();
+								text-align: right;
+								font-weight: bold;
+								font-size: 1.5em;
 							}
 						}
+						.header_logo{
+							width: 30%;
+							height: 100%;
+							.margin(1em 0);
+							.padding(0);
+
+							.logo{
+								width: @fullWidth;
+								img{
+									width: 100%;
+									height: auto;
+									.display();
+									.margin();
+									.padding();
+								}
+							}
+						}
+
 					}
 				}
 			}
@@ -123,15 +134,14 @@ html{
 			.navigation-box{
 				width: @fullWidth;
 				height: inherit;
-				background-color: @black;
 				.display();
 				.margin(0);
 				.padding(0);
 
 				nav{
 					width: @contentBox;
-					height: 4em;
-					border-left: solid 1px @darkGrey;
+					height: 5em;
+					z-index: 999;
 					.margin();
 					.padding();
 					.display();
@@ -143,25 +153,28 @@ html{
 						padding:0;
 
 						.current-menu-ancestor{
-							background-color: @orange;
+							background-color: @lightblue;
 						}
 						.current-menu-item{
-							background-color: @orange;
+							background-color: @lightblue;
+							a{
+								color: @white;
+							}
 						}
 						.current_page_parent{
-							background-color: @orange;
+							background-color: @lightblue;
 						}
 
 						a{
-							color: @lightGrey;
+							color: @lightblue;
+							font-size: 1.5em;
 							text-transform: uppercase;
 							text-decoration: none !important;
-							border-right: solid 1px @darkGrey;
 							.display();
-							.padding(1.5em 2em);
+							.padding(1em 2em);
 
 							&:hover{
-								color: @darkGrey;
+								color: @white;
 							}
 							
 						}
@@ -173,8 +186,13 @@ html{
 							padding:0;
 							transition: 1s;
 							&:hover{
-								background-color: @orange;
+								background-color: @lightblue;
+
 								transition: 1s;
+
+								a{
+									color: @white;
+								}
 							}
 						}
 
@@ -183,7 +201,8 @@ html{
 							position:absolute;
 							top:100%;
 							left:0;
-							background-color: @black;
+							z-index: 999;
+							background-color: @lightblue;
 							padding:0;
 
 							li{
@@ -193,6 +212,7 @@ html{
 
 							a{
 								padding:1.5em 1em;
+								color: @white;
 							}
 
 							ul{
@@ -213,10 +233,36 @@ html{
 
 			.site-content{
 				width: @fullWidth;
-				background-color: @white;
 				.margin(0 0 @footerHeight + 5px 0);
 				.padding();
 				.display();
+
+				.home-hero{
+					width: @fullWidth;
+					height: 75em;
+					z-index: 1;
+					overflow: hidden;
+					.display();
+					.padding();
+					.margin();
+					.position();
+					background-color: pink;
+
+					.video-box{
+						width: @fullWidth;
+						height: 100%;
+						top: -10em;
+						left: 0;
+						.display();
+						.margin();
+						.padding();
+						.position(absolute);
+						video{
+							width: @fullWidth;
+							height: auto;
+						}
+					}
+				}
 
 				.contentBox{
 					width: @contentBox;
@@ -264,11 +310,11 @@ html{
 				height: @footerHeight;
 				text-align: center;
 				color: @white;
-				background-color: @black;
+				background-color: @darkblue;
 				right: 0;
 				bottom: 0;
 				left: 0;
-				border-top: solid 5px @orange;
+				border-top: solid 5px @lightblue;
 				.margin();
 				.padding();
 				.display();
@@ -277,7 +323,6 @@ html{
 					width: @contentBox;
 					p{
 						font-size: .8em;
-						color: @orange;
 						.margin();
 						.padding(2.5em 0 0 0);
 					}
