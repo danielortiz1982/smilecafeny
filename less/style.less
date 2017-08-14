@@ -148,12 +148,15 @@ html{
 					#header-menu{
 						list-style:none;
 						position:relative;
-						float:left;
+						float: left;
 						margin:0;
 						padding:0;
 
 						.current-menu-ancestor{
 							background-color: @lightblue;
+							a{
+								color: @white;
+							}
 						}
 						.current-menu-item{
 							background-color: @lightblue;
@@ -163,6 +166,9 @@ html{
 						}
 						.current_page_parent{
 							background-color: @lightblue;
+							a{
+								color: @white;
+							}
 						}
 
 						a{
@@ -246,7 +252,6 @@ html{
 					.padding();
 					.margin();
 					.position();
-					background-color: pink;
 
 					.video-box{
 						width: @fullWidth;
@@ -262,7 +267,69 @@ html{
 							height: auto;
 						}
 					}
-				}
+				}//end of home-hero
+
+				.oral-topics-home{
+
+					width: @fullWidth;
+					.margin();
+					.padding(5em 0);
+					.display();
+					border-top: solid 2em @darkblue;
+					background-image: url(../../images/background.png);
+					background-repeat: repeat;
+
+					.contentBox{
+						width: @contentBox;
+						height: 100%;
+						.display(table);
+						.margin();
+						.padding();
+
+						.oral-topics-content{
+							width: @fullWidth;
+							vertical-align: middle;
+							.display(table-cell);
+
+							.row{
+								.col-md-4{
+									.oral-topic{
+										width: 90%;
+										.display();
+										.margin();
+										.padding();
+										text-align: center;
+
+										a{
+											width: @fullWidth;
+											transition: 1s;
+											background-color: @lightblue;
+											font-size: 2em;
+											text-decoration: none;
+											text-transform: uppercase;
+											color: @white;
+											border: solid .1em @darkblue;
+											border-radius: 10px;
+											.display();
+											.margin(0);
+											.padding(4em);
+
+											&:hover{
+												transition: 1s;
+												background-color: @darkblue;
+												border: solid .1em @lightblue;
+												border-radius: 0px;
+											}
+
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+				}// end of oral-topics-home
 
 				.contentBox{
 					width: @contentBox;

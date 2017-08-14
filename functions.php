@@ -45,7 +45,10 @@ add_action('wp_enqueue_scripts', 'smile_cafe_Scripts');
 function smile_cafe_Scripts(){
 	wp_enqueue_style( 'smile-cafe-style-reset', get_stylesheet_uri() );
 	wp_enqueue_style( 'smile-cafe-style', get_template_directory_uri() . '/less/css/style.min.css' );
+	wp_enqueue_style( 'smile-cafe-font-awesome', get_template_directory_uri() . '/less/css/font-awesome.min.css' );
 	wp_enqueue_style( 'smile-cafe-bootstrap', get_template_directory_uri() . '/less/css/bootstrap.min.css' );
+	wp_enqueue_script('smile-cafe-jQuery', get_template_directory_uri() . '/js/lib/jquery.js', array(), false, true);
+	wp_enqueue_script('smile-cafe-bootstrap', get_template_directory_uri() . '/js/lib/bootstrap.min.js', array(), false, true);
 	wp_enqueue_script('smile-cafe-mainjs', get_template_directory_uri() . '/js/main.js', array(), false, true);
 }
 // end of smile_cafe_Scripts
