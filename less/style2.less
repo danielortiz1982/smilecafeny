@@ -13,7 +13,7 @@
 @fullWidth: 100%;
 @contentBox: 90%;
 @headerHeight: 9em;
-@footerHeight: 12em;
+@footerHeight: 8em;
 
 
 // Variable Mix Ins
@@ -86,7 +86,7 @@ html{
 
 			.site-header{
 				width: @fullWidth;
-				border-top: solid 1.5em @darkblue;
+				border-top: solid 1em @darkblue;
 				.margin();
 				.padding();
 				.display();
@@ -106,13 +106,13 @@ html{
 									.margin();
 									text-align: right;
 									font-weight: bold;
-									font-size: 1.5em;
+									font-size: 1.2em;
 								}
 							}
 							.header_logo{
-								width: 30%;
+								width: 50%;
 								height: 100%;
-								.margin(2.5em 0 0 0);
+								.margin(3.5em 0 0 0);
 								.padding(0);
 
 								.logo{
@@ -142,7 +142,7 @@ html{
 
 				nav{
 					width: @contentBox;
-					height: 7.5em;
+					height: 4.4em;
 					z-index: 999;
 					.margin();
 					.padding();
@@ -175,11 +175,11 @@ html{
 
 						a{
 							color: @lightblue;
-							font-size: 1.5em;
+							font-size: 1.3em;
 							text-transform: uppercase;
 							text-decoration: none !important;
 							.display();
-							.padding(1em 2em);
+							.padding(1em);
 
 							&:hover{
 								color: @white;
@@ -265,9 +265,9 @@ html{
 					}
 
 					.the-content{
-						font-size: 1.6em;
+						font-size: 1.3em;
 						text-align: left;
-						line-height: 1.6em;
+						line-height: 1.3em;
 						p{
 							.padding(.5em 0);
 							.margin();
@@ -287,7 +287,7 @@ html{
 
 				.home-hero{
 					width: @fullWidth;
-					height: 75em;
+					height: 45em;
 					z-index: 1;
 					overflow: hidden;
 					.display();
@@ -313,11 +313,11 @@ html{
 					.home-form-box{
 
 						width: 25%;
-						height: 60em;
+						height: 44em;
 						background-color: rgb(1, 108, 218);
 						background-color: rgba(1, 108, 218, .7);
 						//opacity: .8;
-						top: 7%;
+						top: 1.5%;
 						left: 5%;
 						border-radius: 15px;
 						border: solid .2em @darkblue;
@@ -326,11 +326,17 @@ html{
 						.padding(2.5em 0 0 0);
 						.position(absolute);
 
+						.form-control{
+							height: 28px;
+
+						}
+
 						h1{
 							text-align: center;
 							color: @white;
 							width: @contentBox;
 							border-bottom: solid 1px @white;
+							font-size: 23px;
 							.padding();
 							.margin();
 						}
@@ -343,12 +349,12 @@ html{
 								.padding();
 								p{
 									color: @white;
-									font-size: 2em;
-									.padding(1em 0 0 0);
+									font-size: 1.2em;
+									.padding(.5em 0 0 0);
 								}
 								textarea{
 									width: @fullWidth;
-									height: 10em;
+									height: 8em;
 								}
 							}
 
@@ -368,9 +374,9 @@ html{
 
 					width: @fullWidth;
 					.margin();
-					.padding(5em 0);
+					.padding(3em 0);
 					.display();
-					border-top: solid 1em @darkblue;
+					//border-top: solid 1em @darkblue;
 					background-image: url(../../images/background.png);
 					background-repeat: repeat;
 
@@ -407,7 +413,7 @@ html{
 											border-radius: 10px;
 											.display();
 											.margin(0);
-											.padding(3em);
+											.padding(1.5em);
 
 											&:hover{
 												transition: 1s;
@@ -431,7 +437,7 @@ html{
 					width: @fullWidth;
 					.display();
 					.margin();
-					.padding(3em 0 1em 0);
+					.padding(2em 0 1em 0);
 
 					.contentBox{
 						width: @contentBox;
@@ -483,12 +489,12 @@ html{
 								.item{
 									.logos{
 
-										width: 65%;
+										width: 80%;
 										.display();
 										.margin();
 										.padding();
 										img{
-											.padding(0 10em);
+											.padding(0 5em);
 										}
 									}
 								}
@@ -519,15 +525,15 @@ html{
 				left: 0;
 				border-top: solid 5px @lightblue;
 				.margin();
-				.padding(1em 0);
+				.padding();
 				.display();
 				.position(absolute);
 				.contentBox{
 					width: @contentBox;
 					p{
-						font-size: 1.2em;
+						font-size: 1em;
 						.margin();
-						.padding(.2em 0 0 0);
+						.padding(.5em 0 0 0);
 					}
 				}
 			}

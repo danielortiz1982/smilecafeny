@@ -14,19 +14,26 @@
         <div class="wrapper">
             <header class="site-header">
                 <div class="contentBox">
-                    <div class="col-md-6">
-                        <figure class="header_logo"><div class="logo"><a href="/Smile_Cafe/website/"><img src="<?php echo get_template_directory_uri(); ?>/images/BV_Boilerplate_Logo.png"></a></div></figure>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="header-contact">
-                            <p>45 PARK AVE UNIT 1</p>
-                            <p>NEW YORK, NY 10016</p>
-                            <p>(212) 779-3494</p>
-                            <p><a href="mailto:">info@smilecafeny.com</a></p>
-
+                    <div class="row">
+                        <div class="col-md-6">
+                            <figure class="header_logo"><div class="logo"><a href="/Smile_Cafe/website/"><img src="<?php echo get_template_directory_uri(); ?>/images/BV_Boilerplate_Logo.png"></a></div></figure>
                         </div>
-                        <!--header-contact-->
+
+                        <div class="col-md-6">
+                            <div class="header-contact">
+                                <p>45 PARK AVE UNIT 1</p>
+                                <p>NEW YORK, NY 10016</p>
+                                <p>(212) 779-3494</p>
+                                <p><a href="mailto:">info@smilecafeny.com</a></p>
+                                <p>
+                                    <a href="http://www.zocdoc.com/practice/smile-cafe-4500" id="zocdoc_schedule" target="_blank">
+                                    <img src="http://offsiteSchedule.zocdoc.com/images/remote/book-orange.png" style="border:0; width: 23%;"></a> 
+                                    <script type="text/javascript" src="http://offsiteSchedule.zocdoc.com/remote/Schedule2.js.aspx?providerid=4500&amp;prefix=zocdoc_&amp;bookBtn=http://offsiteSchedule.zocdoc.com/images/remote/book-orange.png&amp;locationId="></script>
+                                </p>
+
+                            </div>
+                            <!--header-contact-->
+                        </div>
                     </div>
                 </div>
             </header>
